@@ -61,7 +61,7 @@ function Home() {
         <h2>All Posts</h2>
         <div className='post-card'>
           <div className='card-creator'>
-            <p> Angshu </p>
+            <p> Rahul Kumar </p>
             <span>Read</span>
           </div>
           <img src={scene} alt="" />
