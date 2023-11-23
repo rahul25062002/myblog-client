@@ -1,0 +1,160 @@
+#Post {
+    min-height: 40vh;
+    position: relative;
+    background-color: white;
+}
+
+#post-control {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bg2);
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    margin-block: 1.5em;
+    align-items: center;
+}
+
+#post-coverimg {
+    width: 100%;
+    aspect-ratio: 5/2;
+    margin-bottom: 0.3em;
+    object-fit: cover;
+    object-position: center;
+}
+
+#post-content {
+    padding-inline: 0.4em;
+}
+
+#post-meta{
+    margin-bottom: 1em;
+    background-color: var(--bg2);
+    padding-bottom: 0.3em;
+    position: relative;
+}
+
+#post-meta>h1 {
+    padding-inline: 0.3em;
+}
+
+#post-tags {
+    padding-inline: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.3em;
+}
+
+#post-description{
+    padding : 0.4em;
+}
+
+#post-tags > span{
+    background-color: var(--bg3);
+    color : white;
+    font-size: var(--li);
+    padding : 0.1em 0.4em;
+    border-radius: 0.4em;
+}
+
+#post-creator{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.589);
+    color : white;
+    padding-inline : 0.4em;
+    font-weight: bold;
+    font-size: var(--li);
+    margin : auto;
+    position: absolute;
+    top : 0;
+    right : 0;
+    border-radius: 0.4em;
+}
+
+#post-creator > span{
+    color : white;
+}
+#post-comment{
+    background-color: var(--bg2);
+    padding-block: 1em;
+    display: flex;
+    flex-direction: column;
+    gap : 0.4em;
+    align-items: center;
+}
+
+.comment{
+    background-color: white;
+    width: 95%;
+    padding : 0.2em 0.4em;
+    border-radius: 0.4em;
+    font-size: var(--li);
+}
+.comment > p:first-child{
+    font-weight: bold;
+    color : var(--link);
+}
+#addcomment{
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.4em;
+}
+#addcomment > textarea{
+    width: 100%;
+    font-size: var(--p);
+    border : none;
+    padding : 0.3em;
+    outline : none;
+    /* border : 1px solid black; */
+}
+
+#addcomment > span{
+    font-size: var(--li);
+    background-color: black;
+    color : white;
+    padding : 0.1em 0.3em;
+    border-radius: 0.3em;
+}
+
+#addcomment > textarea:focus{
+    border : none;
+    outline : none;
+}
+
+
+@media screen and (min-width : 1025px) {
+    #Post{
+        width: 60%;
+        margin: 1em auto;
+    }
+    
+    #post-control{
+        background-color: inherit;
+        position: absolute;
+        flex-direction: column;
+        width: fit-content;
+        height: 60vh;
+        gap : 2em;
+        top : 5%;
+        left : 0;
+        transform: translateX(-100%);
+        
+    }
+    #post-control  .upvote{
+        flex-direction: column;
+    }
+    #post-comment{
+        align-items: flex-start;
+        padding-inline : 2em;
+        gap : 1em;
+        margin-top : 2em;
+    }
+    .comment{
+        width: 40%;
+    }
+}

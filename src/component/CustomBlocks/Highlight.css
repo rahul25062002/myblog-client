@@ -1,0 +1,53 @@
+.highlight{
+    width: 80%;
+    border-radius: 0.4em;
+    margin-block: 0.5em;
+    overflow: hidden;
+}
+.highlight > p:first-child{
+    font-weight: bold;
+    padding-block : 0.2em;
+    background-color: rgba(0, 0, 0, 0.25);
+    color : rgb(221, 226, 232);
+    display: flex;
+    align-items: center;
+    gap : 0.3em;
+}
+
+.highlight .svg-img{
+    fill: rgb(221, 226, 232) !important;
+}
+
+.highlight > p{
+    padding-inline: 0.5em;
+    padding-block: 0.3em;
+}
+.highlight > p > .svg-img{
+    width: 30px;
+}
+.tip{
+    background-color: var(--bg4)
+}
+
+.note{
+    background-color: var(--bg5);
+}
+
+.warning{
+    background-color: var(--bg6);
+}
+
+@media screen and ( min-width : 480px ) {  
+    .highlight{
+        width: 65%;
+        /* margin-inline: auto; */
+    }
+}
+
+@media screen and ( min-width : 1025px ) {
+    .highlight{
+        width: 50%;
+        /* margin-inline: 0;
+        margin-right : auto; */
+    }
+}

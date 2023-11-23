@@ -1,0 +1,80 @@
+#Dashboard{
+    flex-grow: 1;
+    overflow-y: auto;
+    min-width: 40vh;
+}
+
+#Dashboard > h2{
+    margin-block : 0.5em;
+    padding-inline : 0.4em;
+}
+
+#dash-select{
+    width: 95%;
+    display: block;
+    font-size: var(--li);
+    padding-inline : 0.5em;
+    padding-block: 0.3em;
+    margin: auto;
+}
+
+#dash-select > optgroup{
+    font-size: var(--li);
+}
+
+#post-stats{
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-around;
+    padding-block: 1em;
+    flex-wrap: wrap;
+    row-gap: 0.4em;
+}
+
+#post-stats > h3{
+    width: 100%;
+    text-align: center;
+}
+
+#post-stats > div{
+    width: 45%;
+    border: 1.5px solid black;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    background-color: white;
+}
+
+#post-stats > div > p{
+    color : var(--text1);
+}
+
+@media screen and ( min-width : 480px  ) {
+    #dash-select{
+        width: 50%;
+        align-self: left;
+        margin-left : 1em;
+    }
+}
+@media screen and ( min-width : 1025px  ) {
+
+    #Dashboard{
+        padding-inline: 3.5em;
+        /* background-color: red */
+    }
+
+    #Dashboard > h2{
+        text-align: center;
+    }
+    #dash-select{
+        display: block;
+        margin: auto;
+        width: 30%;
+        align-self: left;
+        /* margin-left : 1em; */
+    }
+
+    #post-stats{
+        width: 70%;
+        margin : auto;
+    }
+}

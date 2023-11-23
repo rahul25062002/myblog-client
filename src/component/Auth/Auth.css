@@ -1,0 +1,105 @@
+#Auth{
+    margin-block-start: 1em;
+    overflow-y: scroll;
+    background-color: white;
+    padding-block: 1.5em;
+    padding-inline: 0.5em;
+    color : var(--text1);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    width: 95vw;
+    margin-inline : auto;
+    border: 2px solid var(--text1);
+    border-radius: 1em;
+}
+
+#Auth > form{
+    display: flex;
+    flex-direction: column;
+    gap : 0.6em;
+    align-items: center;
+    width: 100%;
+}
+
+.form-input > input{
+    font-size: var(--li);
+    display: block;
+    width: 95%;
+    padding-inline : 0.5em;
+    padding-block: 0.5em;
+    border-radius: 0.4em;
+    outline : none;
+    border : none;
+    background-color: var(--bg2);
+    border : 2px solid var(--aftercolor);
+    margin-inline: auto;
+}
+
+.form-input{
+    width: 100%;
+}
+
+.form-input.error{
+    --aftercolor : red;
+}
+.form-input.success{
+    --aftercolor : var(--bg5);
+   --aftercontent : '';
+}
+
+.form-input::after{
+    content : var(--aftercontent);
+    color : var(--aftercolor);
+    padding-left: 0.3em;
+    display: block;
+    font-size: var(--li);
+    top : 100%;
+}
+
+#select_img{
+    display: flex;
+    gap : 0.3em;
+    align-items: center;
+}
+
+#select_img > img{
+    width: 50px;
+    height: 50px;
+    padding : 0;
+    border-radius: 99999em;
+    object-fit: cover;
+    object-position: center;
+    border : 2px solid black;
+}
+
+@media screen and ( min-width : 480px ) {
+    #Auth{
+        width: 80vw;
+    }
+
+    .form-input{
+        width: 70%;
+    }
+    
+}
+
+@media screen and ( min-width : 1025px ) {
+    #Auth{
+        width: 70vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    #Auth > h1 ,
+    #form-para{
+        width: 100%;
+        text-align: center;
+        /* background-color: red; */
+    }
+    .form-input{
+        width: 45%;
+    }
+}

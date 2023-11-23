@@ -1,0 +1,41 @@
+.code{
+    width: 100%;
+    overflow-x: auto;
+    border : 1px solid rgba(0, 0, 0, 0.504);
+    position: relative;
+    font-size: var(--li);
+    margin-block: 1em;
+}
+
+.code-copy{
+    width: 35px;
+    position: absolute;
+    top : 0;
+    right : 0;
+}
+.code-lang{
+    font-size: var(--xsm);
+    background-color: var(--bg3);
+    color : white;
+    display: inline-block;
+    padding-inline : 0.3em;
+    padding-block : 0.2em;
+    border-radius : 0.3em;
+    margin-bottom: 0.3em;
+}
+
+@media screen and ( min-width : 480px ) {
+    .code{
+        width: 70%;
+        margin-inline : auto;
+    }
+}
+
+@media screen and ( min-width : 1025px ) {
+    .code{
+        width: 95%;
+    }
+    .code-copy{
+        cursor: pointer;
+    }
+}
